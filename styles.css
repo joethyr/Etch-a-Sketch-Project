@@ -1,0 +1,13 @@
+#grid {
+  padding: 0 500px 0 500px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-columns: minmax(50px, auto);
+  grid-gap: 1em;
+}
+#grid > div {
+  background: rgb(230, 230, 230);
+  padding: 1em;
+}
