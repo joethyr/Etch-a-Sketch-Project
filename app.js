@@ -1,8 +1,3 @@
-function changeColor() {
-  $(this).css("background", "white");
-  console.log("hello");
-}
-
 $(document).ready(function () {
   $(".square").hover(function () {
     $(this).addClass("toggle");
@@ -15,3 +10,9 @@ for (i = 0; i < 256; i++) {
 
   document.getElementById("grid").appendChild(grid);
 }
+
+$(document).ready(function () {
+  $("#clearButton").click(function () {
+    $(".square").removeClass("toggle");
+  });
+});
