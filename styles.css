@@ -20,7 +20,7 @@
   align-content: center;
 }
 
-.buttonsAll {
+.buttons-all {
   border: #9c1e50 solid 5px;
   border-radius: 8px;
   background-color: #d13757;
@@ -29,27 +29,25 @@
   margin-right: 25px;
 }
 
-.buttonsAll:hover {
+.buttons-all:hover {
   background-color: #9c1e50;
   cursor: pointer;
   color: #1c1130;
 }
 
-#grid {
+#grid-container {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  /* grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr); */
   height: 42vw;
   width: 42vw;
 }
 .square {
   background: #77b19f;
-  padding: 1em;
   border: #34264f solid 1px;
 }
 
 .toggle {
   background: #34264f;
-  padding: 1em;
   border: #34264f solid 1px;
 }
