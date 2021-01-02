@@ -7,23 +7,26 @@
 .title {
   text-align: center;
   font-size: 90px;
-  margin: 30px 0 70px 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 .buttons {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 70px;
-  /* justify-items: center; */
-  justify-content: center;
-  gap: 60px;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .buttonsAll {
   border: #9c1e50 solid 5px;
   border-radius: 8px;
   background-color: #d13757;
-  font-size: 25px;
+  font-size: 45px;
+  margin-top: 40px;
+  margin-right: 25px;
 }
 
 .buttonsAll:hover {
@@ -36,9 +39,8 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  justify-content: center;
-  height: 40vw;
-  width: 40vw;
+  height: 42vw;
+  width: 42vw;
 }
 .square {
   background: #77b19f;
