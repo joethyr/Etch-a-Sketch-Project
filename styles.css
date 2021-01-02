@@ -1,25 +1,53 @@
+* {
+  font-family: "Permanent Marker", cursive;
+  color: #34264f;
+  background-color: #e96767;
+}
+
 .title {
   text-align: center;
+  font-size: 90px;
+  margin: 30px 0 70px 0;
 }
 .buttons {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 70px;
+  /* justify-items: center; */
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 0;
+}
+
+.buttonsAll {
+  border: #9c1e50 solid 5px;
+  border-radius: 8px;
+  background-color: #d13757;
+  font-size: 25px;
+}
+
+.buttonsAll:hover {
+  background-color: #9c1e50;
+  cursor: pointer;
+  color: #1c1130;
 }
 
 #grid {
-  padding: 10% 35% 0 35%;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  /* grid-auto-rows: 50px;
-  grid-auto-columns: 50px; */
+  justify-content: center;
+  height: 40vw;
+  width: 40vw;
 }
 .square {
-  background: rgb(230, 230, 230);
+  background: #77b19f;
   padding: 1em;
-  border: black solid 1px;
+  border: #34264f solid 1px;
 }
 
 .toggle {
-  background: black;
+  background: #34264f;
   padding: 1em;
-  border: black solid 1px;
+  border: #34264f solid 1px;
 }
