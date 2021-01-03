@@ -45,6 +45,7 @@
 .square {
   background: #77b19f;
   border: #34264f solid 1px;
+  transition: 0s;
 }
 
 .toggle {

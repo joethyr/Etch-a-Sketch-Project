@@ -1,9 +1,19 @@
 const gridContainer = document.querySelector("#grid-container");
 let squaresPerSide = "";
 
-$(document).ready(function () {
+$(function () {
   $(".square").hover(function () {
     $(this).addClass("toggle");
+  });
+});
+
+$(function () {
+  $("#grid-button").click(function () {
+    squaresPerSide = prompt(
+      "How many squares do you want on each side of the grid?"
+    );
+    removeCells();
+    createGrid(squaresPerSide);
   });
 });
 
@@ -14,6 +24,11 @@ $(document).ready(function () {
 });
 
 function createGrid(squaresPerSide) {
+  $(function () {
+    $(".square").hover(function () {
+      $(this).addClass("toggle");
+    });
+  });
   gridContainer.style.gridTemplateColumns = `repeat(${squaresPerSide}, 1fr`;
   gridContainer.style.gridTemplateRows = `repeat(${squaresPerSide}, 1fr`;
   let squaresTotal = squaresPerSide * squaresPerSide;
@@ -21,6 +36,12 @@ function createGrid(squaresPerSide) {
     const grid = document.createElement("div");
     grid.className = "square";
     document.getElementById("grid-container").appendChild(grid);
+  }
+}
+
+function removeCells() {
+  while (gridContainer.firstChild) {
+    gridContainer.removeChild(gridContainer.firstChild);
   }
 }
 
