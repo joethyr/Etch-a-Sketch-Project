@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector("#grid-container");
-let squaresPerSide = "";
+let squaresPerSide = 16;
 
 // define the function that toggles the squares on the grid
 function toggleSquares() {
@@ -13,15 +13,32 @@ $(document).ready(function () {
   toggleSquares();
 });
 
-//prompts the user when the button is clicked and runs the createGrid function.
-$(function () {
+function loadGridButton() {
   $("#grid-button").click(function () {
-    squaresPerSide = prompt(
-      "How many squares do you want on each side of the grid?"
-    );
-    createGrid(squaresPerSide);
+    changeGrid();
   });
+}
+// call the function
+$(document).ready(function () {
+  loadGridButton();
 });
+
+// prompts the user how many squares per side and then runs createGrid function
+function changeGrid() {
+  squaresPerSide = parseInt(
+    prompt("How many squares do you want on each side of the grid?")
+  );
+  if (
+    squaresPerSide < 1 ||
+    squaresPerSide > 100 ||
+    Number.isNaN(squaresPerSide)
+  ) {
+    alert("Please enter a number from 1 to 100.");
+    changeGrid();
+  } else {
+    createGrid(squaresPerSide);
+  }
+}
 
 //function that removes the toggle class from the grid squares
 $(document).ready(function () {
